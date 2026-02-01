@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar';
+import Hero from './sections/Hero';
+import FeaturedTours from './sections/FeaturedTours';
+import MapSection from './sections/MapSection';
+import Testimonials from './sections/Testimonials';
+import Newsletter from './sections/Newsletter';
+import Footer from './sections/Footer';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-primary-black text-white antialiased">
+      <Navbar />
+      <main>
+        <Hero />
+        <FeaturedTours />
+        <MapSection />
+        <Testimonials />
+        <Newsletter />
+        <Footer />
+      </main>
     </div>
   );
-}
+};
 
 export default App;
